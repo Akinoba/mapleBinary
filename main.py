@@ -1,24 +1,23 @@
-
-
 import tkinter as tk
 import re
 
 #                   < Program settings / directory >
 # This const is not nessecary, however it will make it easier to change the rendered image
-FILE = r"tower.txt"
+FILE = r"cali_cube.txt"
 
-magnification = 4
+magnification = 20
 is_borderless = False
 window_title = FILE
 
 #                   < Creates a 2D list in "lines" >
 # By creating a 2D list we can store each line as an index ie: line[1] --> y pos 2
 
-lines = []
 line = []
+lines = [line for line_count in enumerate(open(FILE, "r").readlines())]
 
-for line_count in range(len(open(FILE, "r").readlines())):
-    lines.append(line)
+
+#for line_count in enumerate(open(FILE, "r").readlines()):
+    #lines.append(line)
 
 
 #                   < Finding image properties & sizes >
@@ -67,7 +66,6 @@ window.overrideredirect(is_borderless) # if true --> set window to borderless
 # We can utlize the tkinter Canvas function to render pixels without interacting with these low level APIs in c / c++
 # Since the tkinter Canvas has no direct function to render a pixel we can utlize the create_rectangle function instead
 # This provides us with benfits a pixel function can not, for example: magnify a pixel --> we can change the 2nd set of x & y cords
-# By setting the background colour to black we can avoid setting black pixels & only set white pixels, this should increase performance
 
 viewport = tk.Canvas(window, width=str(x_size), height=str(y_size), bg="black", highlightthickness=0)
 
@@ -92,4 +90,4 @@ window.mainloop()
 
 # Kaitlyn Williams 2022
 # Apache 2.0 License
-# 📡 Initial Commit 📡
+# ♻️ loop optimization ♻️
