@@ -24,6 +24,4 @@ To display an image change the following values and follow these steps:
     5. Once all of the above variables have been set, compile & run the script to display the image
 
 ### ‼️ Current bugs ‼️
-    1. Bits improperly displayed in certain images
-    2. Large images throw index errors
-    3. Images with large y dimensions display all black pixels rather than ther assigned pixels at the bottom of the image
+-     Large images throw index errors
