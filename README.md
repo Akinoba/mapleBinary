@@ -1,6 +1,6 @@
 # 🍁 **mapleBinary** 🍁
 mapleBinary is an open source psuedo binary image creator, writen in python 3.0 🐍. 
-mapleBinary lets you display txt files with unicode binary characters within them as images in a tkinter window.
+mapleBinary lets you display txt files with unicode binary characters as images in a tkinter window.
 
 
 ## How to use:
