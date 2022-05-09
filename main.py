@@ -2,7 +2,7 @@ import tkinter as tk
 import re
 
 #                   < Program settings / directory >
-# This const is not nessecary, however it will make it easier to change the rendered image
+# This const is not nesscary, however it will make it easier to change the rendered image
 
 file = str(input("File name: "))
 line_data = open(file, "r").readlines()
@@ -12,7 +12,7 @@ is_borderless = False
 window_title = str(file)
 
 
-#                   < Parsing file and relocatating data >
+#                   < Parsing file and relocating data >
 # Inorder to store bits in the 2D list "lines", we need to extract the bits from the requested line in "FILE"
 # To get all the bits in a line we grab all the requested characters with a regular expressions pattern
 # Once the all the characters have been grabbed we can set them to a "line" in "lines", this provides ease of acsess
@@ -36,11 +36,11 @@ else:
     raise RuntimeError(":: FILE MUST CONTAIN BINARY DATA ::")
 
 
-#                   < Creating window & setting magnifaction >
-# Once we have the prerequiste information to render the image, we can prepare a tkinter window to display the image
+#                   < Creating window & setting magnification >
+# Once we have the prerequisite information to render the image, we can prepare a tkinter window to display the image
 # Since the size arguments of the function "geometry" require a string rather than an int, so we must convert the args
-# x_size & y_size to strings. If magnifaction is required --> multiply value by magnification value --> convert to string
-# Note magnification is pseudo, in reality the size of the pixel is being changed, essiently this enlarges an image.
+# x_size & y_size to strings. If magnification is required --> multiply value by magnification value --> convert to string
+# Note magnification is pseudo, in reality the size of the pixel is being changed, essentially this enlarges an image.
 
 window = tk.Tk()
 window.title(window_title)
@@ -49,9 +49,9 @@ window.overrideredirect(is_borderless) # if true --> set window to borderless
 
 
 #                   < Creating canvas & defining pixels >
-# Inorder to draw a pixel to the screen we need a way of display colours without directly utlizing graphical APIs like OpenGL
-# We can utlize the tkinter Canvas function to render pixels without interacting with these low level APIs in c / c++
-# Since the tkinter Canvas has no direct function to render a pixel we can utlize the create_rectangle function instead
+# Inorder to draw a pixel to the screen we need a way of display colours without directly utilizing graphical APIs like OpenGL
+# We can utilize the tkinter Canvas function to render pixels without interacting with these low level APIs in c / c++
+# Since the tkinter Canvas has no direct function to render a pixel we can utilize the create_rectangle function instead
 # This provides us with benfits a pixel function can not, for example: magnify a pixel --> we can change the 2nd set of x & y cords
 
 viewport = tk.Canvas(window, width=str(x_size * magnification), height=str(y_size * magnification), bg="black", highlightthickness=0)
@@ -64,8 +64,8 @@ def draw_pixel(x, y, bit):
 
     viewport.create_rectangle(x, y, x + magnification, y + magnification, outline=bit_colour, fill=bit_colour)
 
-#                   < Rendering image & closing statments >
-# To render each pixel to the canvas (viewport) we need to utlize for-loops to itterate through the y_size & x_size
+#                   < Rendering image & closing statements >
+# To render each pixel to the canvas (viewport) we need to utilize for-loops to iterate through the y_size & x_size
 # For every "line" in the "lines" we need to print each bit as a pixel, to do this we can call the draw_pixel function definded above
 
 for y_count in range(y_size):
@@ -77,4 +77,4 @@ window.mainloop()
 
 # Kaitlyn Williams 2022
 # Apache 2.0 License
-# 🪴 Input Variation 🪴
+# ✏️ Spelling Corrections ✏️
