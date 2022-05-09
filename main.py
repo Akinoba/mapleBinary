@@ -4,12 +4,12 @@ import re
 #                   < Program settings / directory >
 # This const is not nessecary, however it will make it easier to change the rendered image
 
-FILE = r"bingus.txt"
-line_data = open(FILE, "r").readlines()
+file = str(input("File name: "))
+line_data = open(file, "r").readlines()
 
-magnification = 4
+magnification = int(input("Magnification: "))
 is_borderless = False
-window_title = FILE
+window_title = str(file)
 
 
 #                   < Parsing file and relocatating data >
@@ -77,4 +77,4 @@ window.mainloop()
 
 # Kaitlyn Williams 2022
 # Apache 2.0 License
-# 📝 File reading & Logical Error Solving 📝
+# 🪴 Input Variation 🪴
