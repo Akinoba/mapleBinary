@@ -17,11 +17,11 @@ To create a custom image, follow the following steps:
 ### 🎥 Displaying images 🎥
 To display an image change the following values and follow these steps:
 
-    1. Change the value of the constant FILE to the name of your txt file (as string incluiding .txt)
-    2. Set the value of magnification to your desired value (int) (values 1 through 20 work the best)
-    3. Change the value of is_borderless to your desired result (True = Borderless, False = Bordered)
-    4. Set the value of window_title to your desired title (by defualt set to name of file chosen)
-    5. Once all of the above variables have been set, compile & run the script to display the image
+    1. Execute the program "main.py"
+    2. Enter your desired magnification value (int) (values 1 through 20 work the best)
+    3. Enter the name of the file you wish to display (ie: tower.txt)
+    4. OPTIONAL --> Set the value of window_title to your desired title in an IDE (by defualt set to name of file chosen)
+    5. OPTIONAL --> Set the variable "is_borderless" to your desired value in an IDE (True = borderless, False = bordered)
 
 ### ‼️ Current bugs ‼️
 -     Large images throw index errors
